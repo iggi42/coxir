@@ -8,7 +8,7 @@
     <title>Coxir.Struct.Channel – coxir v0.8.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-fe91fe3cc9.js"></script>
+    <script src="dist/sidebar_items-967c02cee7.js"></script>
     
     
     
@@ -304,6 +304,15 @@ for a list of fields and a broader documentation.</p>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#set_slowmode/2">set_slowmode(channel, limit)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Change the slowmode rate of a given channel</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#set_topic/2">set_topic(channel, topic)</a>
   </div>
   
@@ -433,7 +442,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">create_invite(term, params \\ %{})</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L335" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L346" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -478,7 +487,7 @@ for a broader explanation on the fields and their defaults.</p>
     </a>
     <span class="signature">create_permission(channel, overwrite, params)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L310" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L321" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -508,7 +517,7 @@ for a broader explanation on the fields and their defaults.</p>
     </a>
     <span class="signature">create_webhook(channel, params)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L370" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L381" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -547,7 +556,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">delete(channel)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L296" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L307" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -662,7 +671,7 @@ and <code class="inline">nil</code> otherwise.</p>
     </a>
     <span class="signature">get_invites(channel)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L350" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L361" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -755,7 +764,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">get_voice_members(channel)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L401" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L412" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -787,7 +796,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">get_webhooks(channel)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L385" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L396" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -946,7 +955,7 @@ for a broader explanation on the fields and their defaults.</p>
     </a>
     <span class="signature">set_bitrate(channel, bitrate)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L271" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L282" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -1091,6 +1100,37 @@ or a map containing error information.</p>
 
   </section>
 </div>
+<div class="detail" id="set_slowmode/2">
+  
+  
+  <div class="detail-header">
+    <a href="#set_slowmode/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">set_slowmode(channel, limit)</span>
+    
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L271" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+      <div class="specs">
+        
+          <pre>set_slowmode(<a href="#t:channel/0">channel</a>(), <a href="https://hexdocs.pm/elixir/Integer.html#t:t/0">Integer.t</a>()) :: <a href="https://hexdocs.pm/elixir/typespecs.html#basic-types">map</a>()</pre>
+        
+      </div>
+    
+  </div>
+  <section class="docstring">
+    <p>Change the slowmode rate of a given channel.</p>
+<p>Returns a channel object upon success
+or a map containing error information.</p>
+
+  </section>
+</div>
 <div class="detail" id="set_topic/2">
   
   
@@ -1132,7 +1172,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">set_user_limit(channel, limit)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L282" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/channel.ex#L293" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
