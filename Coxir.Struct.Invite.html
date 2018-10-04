@@ -8,7 +8,7 @@
     <title>Coxir.Struct.Invite – coxir v0.8.0</title>
     <link rel="stylesheet" href="dist/app-480ffdc169.css" />
     
-    <script src="dist/sidebar_items-967c02cee7.js"></script>
+    <script src="dist/sidebar_items-c2ffd601a7.js"></script>
     
     
     
@@ -140,6 +140,15 @@ for a list of fields and a broader documentation.</p>
     <a href="#get/1">get(id)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Fetches a cached invite object</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get/2">get(code, with_counts? \\ false)</a>
+  </div>
+  
     <div class="summary-synopsis"><p>Fetches an invite</p>
 </div>
   
@@ -215,7 +224,7 @@ for a list of fields and a broader documentation.</p>
     </a>
     <span class="signature">accept(code)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L36" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L39" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -246,7 +255,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">delete(code)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L51" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L54" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -277,7 +286,7 @@ or a map containing error information.</p>
     </a>
     <span class="signature">get(id)</span>
     
-      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L21" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L24" class="view-source" rel="help" title="View Source">
        <span class="icon-code" aria-hidden="true"></span>
        <span class="sr-only">View Source</span>
      </a>
@@ -292,9 +301,38 @@ or a map containing error information.</p>
     
   </div>
   <section class="docstring">
+    <p>Fetches a cached invite object.</p>
+<p>Returns an object if found
+and <code class="inline">nil</code> otherwise.</p>
+
+  </section>
+</div>
+<div class="detail" id="get/2">
+  
+  
+    <span id="get/1"></span>
+  
+  <div class="detail-header">
+    <a href="#get/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get(code, with_counts? \\ false)</span>
+    
+      <a href="https://github.com/satom99/coxir/blob/master/lib/coxir/struct/invite.ex#L24" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
     <p>Fetches an invite.</p>
 <p>Returns an invite object upon success
 or a map containing error information.</p>
+<p>Refer to <a href="https://discordapp.com/developers/docs/resources/invite#get-invite">this</a>
+for more information.</p>
 
   </section>
 </div>
