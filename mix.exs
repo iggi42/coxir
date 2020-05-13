@@ -20,7 +20,7 @@ defmodule Coxir.Mixfile do
 
   def application do
     [
-      mod: {Coxir, []}
+      #      mod: {Coxir, []}
     ]
   end
 
